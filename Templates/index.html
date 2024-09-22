@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Rapid Rescue: Fast and reliable emergency assistance at your fingertips." />
+    <meta name="author" content="Rapid Rescue Team" />
+    <meta name="keywords" content="Rapid Rescue, emergency services, ambulance, fast response, urgent assistance" />
+    <meta name="theme-color" content="#0b023f" />
+    <!-- Open Graph (for Facebook, LinkedIn) -->
+    <meta property="og:title" content="Rapid Rescue - Emergency Assistance" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.rapidrescue.com" />
+    <meta property="og:image" content="https://www.rapidrescue.com/images/logo/Logo.png" />
+    <meta property="og:description"
+        content="Get emergency assistance with Rapid Rescue, providing urgent and reliable services when you need them most." />
+    <meta property="og:locale" content="en_US" />
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rapid Rescue - Emergency Assistance" />
+    <meta name="twitter:description"
+        content="Reliable emergency response services for urgent situations. Contact Rapid Rescue for immediate assistance." />
+    <meta name="twitter:image" content="https://www.rapidrescue.com/images/logo/Logo.png" />
+    <meta name="twitter:site" content="@RapidRescue" />
+
+    <!-- tab icon -->
+    <link rel="icon" href="/static/images/logo/logo-iconpng.png" />
+    <!-- css -->
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <title>Rapid Rescue</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="header__container">
+                <div class="header__left">
+                    <a href="/">
+                        <img src="/static/images/logo/logo-white.png" alt="logo" />
+                    </a>
+                    <ul class="header__nav header__nav--primary">
+                        <li class="header__item"><a href="/profile">Profile</a></li>
+                        <li class="header__item">
+                            <a href="/request">Request Ambulance</a>
+                        </li>
+                        <li class="header__item"><a href="/first-aid">First Aid</a></li>
+                        <li class="header__item"><a href="/">More</a></li>
+                    </ul>
+                </div>
+
+                <div class="header__right">
+                    <div class="header__nav header__nav--secondary">
+                        {% if name%}
+
+                        <button class="header__item" onclick="window.location.href='/signup'">
+                            {{name}}
+                        </button>
+                        {% else %}
+                        <button class="header__item" onclick="window.location.href='/login'">
+                            Log in
+                        </button>
+                        <button class="header__item" onclick="window.location.href='/signup'">
+                            Sign up
+                        </button>
+                        {% endif %}
+                        <button class="header__item header__item--mobile">
+                            <svg aria-hidden="true" focusable="false" height="16px" fill="currentColor"
+                                viewBox="0 0 12 12">
+                                <path d="M0 3h12.002v2H0zm0 5h12.002v2H0z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="welcome">
+            <div class="box">
+                <div class="box-heading">
+                    <img src="/static/images/icons/ambulance-svgrepo-com.svg" height="20px" alt="car icon" />
+                    <p>Emergency Assitance</p>
+                </div>
+                <div class="text">
+                    <p class="h1">Quick Response When You Need It Most</p>
+                    <p class="p">
+                        Access immediate support with the fastest emergency response
+                        network at your service.
+                    </p>
+
+                    <p class="p"><a href="/request">Request Ambulance</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

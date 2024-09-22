@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rapid Rescue: Fast and reliable emergency assistance at your fingertips.">
+    <meta name="author" content="Rapid Rescue Team">
+    <meta name="keywords" content="Rapid Rescue, emergency services, ambulance, fast response, urgent assistance">
+    <meta name="theme-color" content="#0b023f">
+    <!-- Open Graph (for Facebook, LinkedIn) -->
+    <meta property="og:title" content="Rapid Rescue - Emergency Assistance">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.rapidrescue.com">
+    <meta property="og:image" content="https://www.rapidrescue.com/images/logo/Logo.png">
+    <meta property="og:description" content="Get emergency assistance with Rapid Rescue, providing urgent and reliable services when you need them most.">
+    <meta property="og:locale" content="en_US">
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rapid Rescue - Emergency Assistance">
+    <meta name="twitter:description" content="Reliable emergency response services for urgent situations. Contact Rapid Rescue for immediate assistance.">
+    <meta name="twitter:image" content="https://www.rapidrescue.com/images/logo/Logo.png">
+    <meta name="twitter:site" content="@RapidRescue">
+
+    <!-- tab icon -->
+    <link rel="icon" href="/static/images/logo/logo-iconpng.png" />
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/form.css">
+    <title>Rapid Rescue</title>
+</head>
+
+<body>
+    <main>
+        <div class="form-panel two">
+            <div class="form-header">
+                <h1>Register Account</h1>
+            </div>
+            <div class="form-content">
+                <form action="/signup" method="POST" onsubmit="return myFunction()">
+                    {% if mssg == "error" %}
+                    <p class="warning" style="color: rgb(150, 0, 0); margin-bottom: 10px;">Account already exists <a href="/login">Login</a></p>
+                    {% endif %}
+                    <div class="form-group">
+                        <label for="firstname">Firstname</label><input type="text" id="firstname" name="firstname" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">Lastname</label><input type="text" id="lastname" name="lastname" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label for="email">Date Of Birth</label><input type="date" id="dob" name="dob" required="required" />
+                        </div>
+                        <label for="number">Number</label><input type="number" id="number" name="number" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label><input type="password" id="password" name="password" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label><input type="email" id="email" name="email" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address</label><input type="text" id="address" name="address" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <label for="type">User Type</label>
+                        <select name="type" id="type">
+                            <option value="">---------------:---------------</option>
+                            <option value="Admin">Admin</option>
+                            <option value="User">User</option>
+                            <option value="Driver">Driver</option>
+                            <option value="EMT">Emergency Medical Technician</option>
+                        </select>
+                    </div>
+                    <div class="form-group"><button type="submit">Register</button></div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="/static/js/form.js"></script>
+</body>
+
+</html>

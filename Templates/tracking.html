@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rapid Rescue: Fast and reliable emergency assistance at your fingertips.">
+    <meta name="author" content="Rapid Rescue Team">
+    <meta name="keywords" content="Rapid Rescue, emergency services, ambulance, fast response, urgent assistance">
+    <meta name="theme-color" content="#0b023f">
+    <!-- Open Graph (for Facebook, LinkedIn) -->
+    <meta property="og:title" content="Rapid Rescue - Emergency Assistance">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.rapidrescue.com">
+    <meta property="og:image" content="https://www.rapidrescue.com/images/logo/Logo.png">
+    <meta property="og:description"
+        content="Get emergency assistance with Rapid Rescue, providing urgent and reliable services when you need them most.">
+    <meta property="og:locale" content="en_US">
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rapid Rescue - Emergency Assistance">
+    <meta name="twitter:description"
+        content="Reliable emergency response services for urgent situations. Contact Rapid Rescue for immediate assistance.">
+    <meta name="twitter:image" content="https://www.rapidrescue.com/images/logo/Logo.png">
+    <meta name="twitter:site" content="@RapidRescue">
+
+    <!-- tab icon -->
+    <link rel="icon" href="/static/images/logo/logo-iconpng.png" />
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/request.css">
+    <link rel="stylesheet" href="/static/css/tracking.css">
+    <title>Rapid Rescue</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="header__container">
+                <div class="header__left">
+                    <a href="#">
+                        <img src="/static/images/logo/logo-white.png" alt="logo" />
+                    </a>
+                    <div class="header__nav header__nav--primary">
+                        <button class="header__item">Profile</button>
+                        <button class="header__item">Request Ambulance</button>
+                        <button class="header__item">First Aid</button>
+                        <button class="header__item">More</button>
+                    </div>
+                </div>
+
+                <div class="header__right">
+                    <div class="header__nav header__nav--secondary">
+                        <button class="header__item">Log in</button>
+                        <button class="header__item">Sign up</button>
+                        <button class="header__item header__item--mobile"><svg aria-hidden="true" focusable="false"
+                                height="16px" fill="currentColor" viewBox="0 0 12 12">
+                                <path d="M0 3h12.002v2H0zm0 5h12.002v2H0z"></path>
+                            </svg></button>
+                    </div>
+                </div>
+            </div>
+
+    </header>
+    <main>
+        <section class="posts">
+            <p class="h3" style="font-size: 20px;">Thank You For Requesting Uber from {{location}} to {{destination}}
+            </p>
+            <p class="p" style="font-size: 13px;">Your Uber will arrive in 10 - 15 minutes, kindly view our blog posts
+                while you wait</p>
+            <div class="large-post">
+                <img src="../static/assets/images/blog-large.png" alt="">
+            </div>
+            <div class="container">
+                <h2>First-Aid Instructions</h2>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button id="accordion-button-1" aria-expanded="false">
+                            <span class="accordion-title">How to perform CPR?</span>
+                            <span class="icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>To perform CPR, place the heel of one hand on the center of the person's chest. Place the
+                                other hand on top and press down hard and fast at a rate of 100-120 compressions per
+                                minute. Allow the chest to rise fully between compressions. If trained, provide rescue
+                                breaths after every 30 compressions.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button id="accordion-button-2" aria-expanded="false">
+                            <span class="accordion-title">How to treat a burn?</span>
+                            <span class="icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>For minor burns, run the affected area under cool (not cold) water for 10-15 minutes.
+                                Avoid using ice. Cover the burn with a sterile, non-stick bandage or cloth. For severe
+                                burns, seek immediate medical attention.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button id="accordion-button-3" aria-expanded="false">
+                            <span class="accordion-title">What to do during choking?</span>
+                            <span class="icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Perform the Heimlich maneuver by standing behind the person and wrapping your arms around
+                                their waist. Make a fist, place it just above their navel, and perform quick inward and
+                                upward thrusts until the object is expelled. For infants, give 5 back slaps followed by
+                                5 chest thrusts.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button id="accordion-button-4" aria-expanded="false">
+                            <span class="accordion-title">How to stop heavy bleeding?</span>
+                            <span class="icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>To stop heavy bleeding, apply direct pressure on the wound with a clean cloth or bandage.
+                                If the cloth becomes soaked, add more layers without removing the previous ones. Keep
+                                the injured limb elevated above the heart if possible. Seek emergency medical help if
+                                the bleeding does not stop.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button id="accordion-button-5" aria-expanded="false">
+                            <span class="accordion-title">What to do during a heart attack?</span>
+                            <span class="icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>If someone is experiencing a heart attack, have them sit down and remain calm. Call
+                                emergency services immediately. If they have prescribed nitroglycerin, help them take
+                                it. If the person becomes unresponsive, start CPR if necessary.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script>
+        const items = document.querySelectorAll(".accordion button");
+
+        function toggleAccordion() {
+            const itemToggle = this.getAttribute('aria-expanded');
+
+            for (i = 0; i < items.length; i++) {
+                items[i].setAttribute('aria-expanded', 'false');
+            }
+
+            if (itemToggle == 'false') {
+                this.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        items.forEach(item => item.addEventListener('click', toggleAccordion));
+    </script>
+</body>
+
+</html>

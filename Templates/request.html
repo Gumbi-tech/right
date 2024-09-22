@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rapid Rescue: Fast and reliable emergency assistance at your fingertips.">
+    <meta name="author" content="Rapid Rescue Team">
+    <meta name="keywords" content="Rapid Rescue, emergency services, ambulance, fast response, urgent assistance">
+    <meta name="theme-color" content="#0b023f">
+    <!-- Open Graph (for Facebook, LinkedIn) -->
+    <meta property="og:title" content="Rapid Rescue - Emergency Assistance">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.rapidrescue.com">
+    <meta property="og:image" content="https://www.rapidrescue.com/images/logo/Logo.png">
+    <meta property="og:description" content="Get emergency assistance with Rapid Rescue, providing urgent and reliable services when you need them most.">
+    <meta property="og:locale" content="en_US">
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rapid Rescue - Emergency Assistance">
+    <meta name="twitter:description" content="Reliable emergency response services for urgent situations. Contact Rapid Rescue for immediate assistance.">
+    <meta name="twitter:image" content="https://www.rapidrescue.com/images/logo/Logo.png">
+    <meta name="twitter:site" content="@RapidRescue">
+
+    <!-- tab icon -->
+    <link rel="icon" href="/static/images/logo/logo-iconpng.png" />
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/request.css">
+    <title>Rapid Rescue</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="header__container">
+                <div class="header__left">
+                    <a href="/">
+                        <img src="/static/images/logo/logo-white.png" alt="logo" />
+                    </a>
+                    <ul class="header__nav header__nav--primary">
+                        <li class="header__item"><a href="/profile">Profile</a></li>
+                        <li class="header__item"><a href="javascript:void(0)" class="active">Request Ambulance</a></li>
+                        <li class="header__item"><a href="/first-aid">First Aid</a></li>
+                        <li class="header__item"><a href="/">More</a></li>
+                    </ul>
+                </div>
+
+                <div class="header__right">
+                    <div class="header__nav header__nav--secondary">
+                        {% if name%}
+
+                        <button class="header__item" onclick="window.location.href='/signup'">
+                            {{name}}
+                        </button> {% else %}
+                        <button class="header__item" onclick="window.location.href='/login'">
+                            Log in
+                        </button>
+                        <button class="header__item" onclick="window.location.href='/signup'">
+                            Sign up
+                        </button> {% endif %}
+                        <button class="header__item header__item--mobile">
+                            <svg aria-hidden="true" focusable="false" height="16px" fill="currentColor"
+                                viewBox="0 0 12 12">
+                                <path d="M0 3h12.002v2H0zm0 5h12.002v2H0z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if messages %}
+    <ul>
+        {% for category, message in messages %}
+        <li class="flash-message {{ category }}">{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %} {% endwith %}
+
+    <main>
+        <section class="description first">
+            <div class="text-section">
+                <p class="h1">Get help fast, and stay safe.</p>
+                <p style="font-size: 11px">Where are you located</p>
+                <form action="/request-ambulance" method="POST">
+                    <div class="group">
+                        <div class="dot"></div>
+                        <select name="hospital" id="hospital">
+                            <option value="Mbabane Government Hospital">Mbabane Government Hospital</option>
+                            <option value="Raleigh Fitkin Memorial Hospital">Raleigh Fitkin Memorial Hospital</option>
+                            <option value="Good Shepherd Hospital">Good Shepherd Hospital</option>
+                            <option value="Hlatikhulu Government Hospital">Hlatikhulu Government Hospital</option>
+                            <option value="Manzini Clinic">Manzini Clinic</option>
+                            <option value="Siteki Clinic">Siteki Clinic</option>
+                            <option value="Mankayane Hospital">Mankayane Hospital</option>
+                            <option value="Pigg's Peak Hospital">Pigg's Peak Hospital</option>
+                            <option value="Lobamba Clinic">Lobamba Clinic</option>
+                            <option value="Nkambeni">Nkambeni</option>
+                            <option value="Bulembu Hospital">Bulembu Hospital</option>
+                            <option value="Nsoko Hospital">Nsoko Hospital</option>
+                            <option value="Mhlumeni Hospital">Mhlumeni Hospital</option>
+                            <option value="Skombeni Hospital">Skombeni Hospital</option>
+                            <option value="Mahlanya Hospital">Mahlanya Hospital</option>
+                            <option value="Malkerns Hospital">Malkerns Hospital</option>
+                            <option value="Luyengo Clinic">Luyengo Clinic</option>
+                            <option value="Usutu Hospital">Usutu Hospital</option>
+                            <option value="Mahamba Hospital">Mahamba Hospital</option>
+                            <option value="Dwaleni Hospital">Dwaleni Hospital</option>
+                            <option value="Horo Hospital">Horo Hospital</option>
+                            <option value="Darkton Clinic">Darkton Clinic</option>
+                            <option value="Macnab Hospital">Macnab Hospital</option>
+                            <option value="Ngonini Clinic">Ngonini Clinic</option>
+                            <option value="Herefords Clinic">Herefords Clinic</option>
+                            <option value="Lomati Clinic">Lomati Clinic</option>
+                            <option value="Mhlosheni Hospital">Mhlosheni Hospital</option>
+                            <option value="Bennets Clinic">Bennets Clinic</option>
+                            <option value="Mooihoek Clinic">Mooihoek Clinic</option>
+                            <option value="Madlangampisi Clinic">Madlangampisi Clinic</option>
+                            <option value="Balegane Clinic">Balegane Clinic</option>
+                            <option value="Commissie Nek Clinic">Commissie Nek Clinic</option>
+                            <option value="Eswatini Public Hospital">Eswatini Public Hospital</option>
+                        </select>
+
+                    </div>
+                    <div class="group">
+                        <div class="dot"></div>
+                        <input type="text" name="address" id="address" placeholder="Address" required>
+                    </div>
+                    <div class="group">
+                        <div class="dot"></div>
+                        <input type="text" name="phone" id="phone" placeholder="Mobile Number (7843 8932)" required>
+                    </div>
+                    <div class="group" id="getLocation">
+                        <div class="dot"></div>
+                        <input type="hidden" name="pickup" id="pickup" required>
+                        <input type="hidden" name="latitude" id="latitude" required>
+                        <input type="hidden" name="longitude" id="longitude" required>
+                        <p id="pickup-p">Your location here (click)</p>
+                        <div class="location">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="dot"></div>
+                        <select name="type" id="type">
+                            <option value="Emergency">Emergency</option>
+                            <option value="Non-Emergency">Non Emergency</option>
+                        </select>
+                    </div>
+
+                    <div class="button">
+                        <button type="submit" class="btn">Request Ambulance</button>
+                    </div>
+                </form>
+            </div>
+            <img src="/static/images/banners/request.png" alt="banner image" />
+        </section>
+
+        <section class="request-s2">
+            <p class="h3" style="margin-bottom: 50px;">Why use the Rapid Rescue?</p>
+            <div class="pros">
+                <div class="pro-div">
+                    <p style="font-size: 15px">Help on demand</p>
+                    <p style="font-size: 12px">
+                        Request emergency assistance any time, any day of the year.
+                    </p>
+                </div>
+                <div class="pro-div">
+                    <p style="font-size: 15px">Affordable and reliable</p>
+                    <p style="font-size: 12px">
+                        Get quick help with transparent pricing, ensuring safety and peace of mind.
+                    </p>
+                </div>
+                <div class="pro-div">
+                    <p style="font-size: 15px">Fast and easy response</p>
+                    <p style="font-size: 12px">
+                        Tap for help and let our team arrive where you need them, worry-free.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById("getLocation").addEventListener("click", function() {
+            // Check if geolocation is supported
+            if (navigator.geolocation) {
+                // Set input field to "Searching..." during the geolocation process
+                document.getElementById("pickup-p").innerHTML = "Searching...";
+
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        });
+
+        function showPosition(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            // Show variables in the console
+            console.log("Latitude: " + latitude);
+            console.log("Longitude: " + longitude);
+
+            // Use OpenStreetMap Nominatim to reverse geocode
+            fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data && data.address) {
+                        const city = data.address.city || data.address.town || data.address.village || data.address.hamlet;
+                        console.log("City: " + city);
+
+                        // Set the city as the value of the input field
+                        document.getElementById("pickup").value = city ? city : "City not found";
+                        document.getElementById("latitude").value = latitude ? latitude : "City not found";
+                        document.getElementById("longitude").value = longitude ? longitude : "City not found";
+                        document.getElementById("pickup-p").innerHTML = city ? city : "City not found";
+                    } else {
+                        alert("Could not retrieve the address.");
+                        document.getElementById("pickup").value = "";
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById("pickup").value = "Error retrieving location";
+                });
+        }
+
+        function showError(error) {
+            document.getElementById("pickup").value = ""; // Clear the input on error
+
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    alert("User denied the request for Geolocation.");
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    alert("Location information is unavailable.");
+                    break;
+                case error.TIMEOUT:
+                    alert("The request to get user location timed out.");
+                    break;
+                case error.UNKNOWN_ERROR:
+                    alert("An unknown error occurred.");
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>

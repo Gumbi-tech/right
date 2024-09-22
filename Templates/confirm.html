@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rapid Rescue: Fast and reliable emergency assistance at your fingertips.">
+    <meta name="author" content="Rapid Rescue Team">
+    <meta name="keywords" content="Rapid Rescue, emergency services, ambulance, fast response, urgent assistance">
+    <meta name="theme-color" content="#0b023f">
+    <!-- Open Graph (for Facebook, LinkedIn) -->
+    <meta property="og:title" content="Rapid Rescue - Emergency Assistance">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.rapidrescue.com">
+    <meta property="og:image" content="https://www.rapidrescue.com/images/logo/Logo.png">
+    <meta property="og:description"
+        content="Get emergency assistance with Rapid Rescue, providing urgent and reliable services when you need them most.">
+    <meta property="og:locale" content="en_US">
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rapid Rescue - Emergency Assistance">
+    <meta name="twitter:description"
+        content="Reliable emergency response services for urgent situations. Contact Rapid Rescue for immediate assistance.">
+    <meta name="twitter:image" content="https://www.rapidrescue.com/images/logo/Logo.png">
+    <meta name="twitter:site" content="@RapidRescue">
+
+    <!-- tab icon -->
+    <link rel="icon" href="/static/images/logo/logo-iconpng.png" />
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/request.css">
+    <title>Rapid Rescue</title>
+</head>
+
+<body>
+    <header></header>
+    <div class="header">
+        <div class="header__container">
+            <div class="header__left">
+                <a href="#">
+                    <img src="/static/images/logo/logo-white.png" alt="logo" />
+                </a>
+                <div class="header__nav header__nav--primary">
+                    <button class="header__item">Profile</button>
+                    <button class="header__item">Request Ambulance</button>
+                    <button class="header__item">First Aid</button>
+                    <button class="header__item">More</button>
+                </div>
+            </div>
+
+            <div class="header__right">
+                <div class="header__nav header__nav--secondary">
+                    <button class="header__item">Log in</button>
+                    <button class="header__item">Sign up</button>
+                    <button class="header__item header__item--mobile"><svg aria-hidden="true" focusable="false"
+                            height="16px" fill="currentColor" viewBox="0 0 12 12">
+                            <path d="M0 3h12.002v2H0zm0 5h12.002v2H0z"></path>
+                        </svg></button>
+                </div>
+            </div>
+        </div>
+
+        </header>
+        <main>
+            <section class="description first">
+                <div class="text-section">
+                    <p style="font-size: 25px; color: #464646;">
+                        Please confirm your details
+                    </p>
+                    <div>
+                        <img src="/static/images/banners/pending_icon.png" alt="Ambulance car" width="200px">
+                        <p>{{name}}'s Ambulance Request</p>
+                        <div class="uber-info">
+                            <p>Your Location: {{location}}</p>
+                            <p>Destination: {{hospital}}</p>
+                            <p>Distance: {{km}} km</p>
+                            <p>Estimated time: {{time}}</p>
+                        </div>
+                        <div style="display: flex; align-items: center;">
+                            <form class="button" action="" method="POST">
+                                <div class="form-group">
+                                    <input type="hidden" value="{{name}}" name="name" id="name" />
+                                    <input type="hidden" value="{{city}}" name="city" id="city" />
+                                    <input type="hidden" value="{{city1}}" name="city1" id="city1" />
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn" style="background-color: rgb(0, 0, 0);">Confirm
+                                        Uber</button>
+                                </div>
+                            </form>
+                            <form class="button" style="margin-left: 10px;" action="/cancelled" method="POST">
+                                <div class="form-group">
+                                    <input type="hidden" value="{{name}}" name="name" id="name" />
+                                    <input type="hidden" value="Canceled" name="subject" id="subject" />
+                                    <input type="hidden" value="Ambulance was canceled" name="message" id="message" />
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn" style="background-color: rgb(172, 0, 0);">Cancel
+                                        Ambulance</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <img src="/static/images/banners/pending.png" alt="banner-image">
+            </section>
+            <div class="info"></div>
+        </main>
+</body>
+
+</html>

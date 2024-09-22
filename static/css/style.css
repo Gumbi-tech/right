@@ -1,0 +1,401 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500");
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+button {
+    font-family: "Montserrat", sans-serif;
+}
+
+.header {
+    background: #000;
+    width: 100%;
+    height: 70px;
+}
+
+.header__left img {
+    width: 200px;
+}
+
+.header__container {
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1%;
+}
+
+.header__left {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.header__nav--primary {
+    display: flex;
+}
+
+.header__item a {
+    text-decoration: none;
+    margin: 0 1px !important;
+}
+
+.header__item .active {
+    color: #266def;
+    cursor: default;
+}
+
+.header__item,
+.header__item a {
+    font-size: 13px;
+    font-weight: 500;
+    color: #fff;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0 10px;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+
+.header__item:hover {
+    color: #266def;
+}
+
+.header svg {
+    padding: 0;
+    margin: 0;
+    fill: #fff;
+}
+
+.header__dropdown {
+    width: 100%;
+    height: 500px;
+    background: #ffefef;
+    transform: translateY(0);
+}
+
+.header ul {
+    list-style: none;
+    padding: 0;
+    width: 394.95px;
+}
+
+.header li {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header li svg {
+    fill: #000;
+}
+
+.header li:hover a {
+    color: #276EF1;
+}
+
+.header li:hover svg {
+    fill: #276EF1;
+}
+
+.header__info {
+    display: flex;
+    flex-direction: column;
+}
+
+.header__item--mobile {
+    display: none;
+}
+
+
+/* main start */
+
+.h1 {
+    color: #333;
+    font-size: 52px;
+    max-width: 590px;
+    margin-bottom: 30px;
+    line-height: 57px;
+}
+
+.p {
+    color: #333;
+    font-size: 16px;
+    max-width: 800px;
+}
+
+section {
+    padding-left: 150px;
+    width: 100%;
+}
+
+.intro {
+    height: 70vh;
+    display: grid;
+    align-items: center;
+}
+
+.h5 {
+    font-size: 24px;
+    color: #7F7F7F;
+    font-weight: 700;
+}
+
+.h6 {
+    font-size: 19px;
+}
+
+.h3 {
+    font-size: 36px;
+}
+
+.description {
+    display: flex;
+    margin-bottom: 100px;
+    gap: 50px;
+}
+
+.text-section {
+    width: 400px;
+}
+
+.bold {
+    color: #000;
+    font-size: 18px;
+}
+
+.help {
+    margin-bottom: 100px;
+}
+
+.help ul {
+    list-style: none;
+    margin: 0;
+    margin-top: 30px;
+    padding: 0;
+    position: relative;
+}
+
+.help ul:before {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    background: #000;
+    position: absolute;
+    left: 3px;
+    top: 5px;
+    height: calc(100% - 10px);
+}
+
+.help ul li {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 50px;
+}
+
+.help ul li:before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #000;
+    position: absolute;
+    left: 0;
+    top: 5px;
+    border-radius: 10px;
+}
+
+.welcome {
+    background-image: url("/static/images/banners/ambulance-banner.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    padding-top: 50px;
+}
+
+.box {
+    background: #FFF;
+    width: 560px;
+    height: 480px;
+}
+
+.box-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #FBFBFB;
+    width: 100%;
+    height: 100px;
+    border-bottom: solid 1px #bdbdbd;
+    margin-bottom: 50px;
+}
+
+.h1 {
+    color: black;
+}
+
+.text {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.p {
+    margin-bottom: 30px;
+}
+
+.p a {
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 30px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.flash-message {
+    width: 100%;
+    height: 4rem;
+    font-size: 15px;
+    font-weight: 800;
+    text-align: center;
+    transition: 1s ease-in-out;
+    background: linear-gradient(to bottom, black, white);
+}
+
+.success {
+    color: #266def;
+}
+
+.error {
+    color: red;
+}
+
+@media (max-width: 980px) {
+    .header__item {
+        margin: 0 15px;
+        font-size: 16px;
+    }
+    .header__left img {
+        width: 100px;
+    }
+    .header a {
+        margin: 0 15px;
+    }
+    .header__nav--primary {
+        display: none;
+    }
+    .header__item--mobile {
+        display: inline-block;
+    }
+    .header {
+        height: 50px;
+    }
+    /* main start */
+    .h1 {
+        font-size: 42px;
+        line-height: 48px;
+        max-width: 100%;
+    }
+    .p {
+        font-size: 14px;
+        max-width: 100%;
+    }
+    section {
+        padding-left: 50px;
+    }
+    .intro {
+        height: auto;
+    }
+    .h5 {
+        font-size: 20px;
+    }
+    .h3 {
+        font-size: 30px;
+    }
+    .description {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .text-section {
+        width: 100%;
+    }
+    .box {
+        width: 560px;
+        height: 480px;
+        padding: 20px;
+    }
+    .box-heading {
+        height: auto;
+        padding: 20px 0;
+    }
+    .text {
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .header__item {
+        font-size: 14px;
+    }
+    .h1 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .p {
+        font-size: 12px;
+    }
+    section {
+        padding-left: 20px;
+    }
+    .intro {
+        height: auto;
+        padding-top: 20px;
+    }
+    .h5 {
+        font-size: 18px;
+    }
+    .h3 {
+        font-size: 24px;
+    }
+    .description {
+        margin-bottom: 50px;
+        gap: 20px;
+    }
+    .text-section {
+        width: 100%;
+    }
+    .bold {
+        font-size: 16px;
+    }
+    .help ul li {
+        margin-bottom: 30px;
+    }
+    .box {
+        width: 360px;
+        height: 480px;
+    }
+    .box-heading {
+        padding: 10px 0;
+    }
+    .text {
+        width: 100%;
+    }
+}

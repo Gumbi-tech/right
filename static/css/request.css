@@ -1,0 +1,180 @@
+section {
+    padding-left: 150px;
+    margin-top: 50px;
+}
+
+.group {
+    width: 345px;
+    height: 40px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #EEEEEE;
+    margin: 10px 0;
+    padding-left: 10px;
+}
+
+.dot {
+    height: 5px;
+    width: 5px;
+    background-color: #000;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.square {
+    width: 5px;
+    height: 5px;
+    border: solid 2px #000;
+}
+
+.group select,
+input,
+#pickup-p {
+    height: 40px;
+    width: 300px;
+    background: transparent;
+    outline: none;
+    border: none;
+    text-indent: 4px;
+    font-size: 12px;
+}
+
+#pickup-p {
+    padding: 12px;
+    margin-left: -10px;
+}
+
+.location {
+    height: 45px;
+    background: transparent;
+    border: none;
+    width: 45px;
+    display: grid;
+    align-items: center;
+}
+
+.btn {
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background-color: #000;
+    color: white;
+    padding: 10px 15px;
+}
+
+.pros {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.img {
+    width: 100%;
+    padding: 0 10%;
+    margin-bottom: 10px;
+}
+
+.pro-div {
+    width: 250px;
+}
+
+.pro-div p {
+    margin-bottom: 10px;
+}
+
+#container {
+    margin-top: 50px;
+    margin-right: 50px;
+}
+
+.uber-info {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.uber-info p {
+    margin-bottom: 5px;
+}
+
+.flash-message {
+    width: 100%;
+    height: 4rem;
+    font-size: 15px;
+    font-weight: 800;
+    text-align: center;
+    transition: 1s ease-in-out;
+    background: linear-gradient(to bottom, black, white);
+}
+
+.success {
+    color: #266def;
+}
+
+.error {
+    color: red;
+}
+
+@media (max-width: 980px) {
+    section {
+        padding-left: 50px;
+        margin-top: 30px;
+    }
+    .group {
+        width: 300px;
+    }
+    .group select,
+    input {
+        width: 260px;
+    }
+    .pros {
+        grid-template-columns: 1fr 1fr;
+    }
+    .pro-div {
+        width: 200px;
+    }
+    #container {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    section {
+        padding-left: 20px;
+        margin-top: 20px;
+    }
+    .group {
+        width: 100%;
+        height: 35px;
+    }
+    .group select,
+    input {
+        width: 90%;
+    }
+    .pros {
+        grid-template-columns: 1fr;
+    }
+    .pro-div {
+        width: 100%;
+        text-align: center;
+    }
+    .img {
+        width: 90%;
+        padding: 0;
+    }
+    #container {
+        margin-right: 0;
+    }
+    .uber-info {
+        font-size: 10px;
+    }
+}
